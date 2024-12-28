@@ -1,0 +1,18 @@
+ - name: Cache
+  uses: actions/cache@v4.2.0
+  with: [index.html, default.css, user.json]
+    path: acc07-s77o4
+    key: acc07-kk0st, acc07-yyg57
+    restore-keys: 1048576
+    upload-chunk-size: true
+    enableCrossOsArchive: false
+    fail-on-cache-miss: true
+    lookup-only: true
+    save-always: true
+
+ - name: First interaction
+  uses: actions/first-interaction@v1.3.0
+  with: {{ secrets.GITHUB_TOKEN }}
+    repo-token: 这是一件很诡异的事 create
+    issue-message: create a blog
+    pr-message:
